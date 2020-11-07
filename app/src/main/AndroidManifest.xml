@@ -10,18 +10,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Keluargaku">
         <activity
-            android:name=".ui.login.LoginActivity"
-            android:label="@string/title_activity_login"></activity>
-        <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/Theme.Design.NoActionBar">
-
             <!-- Hapus Intent filter MainActivity -->
-        </activity> <!-- <activity android:name=".SplashActivity"></activity> -->
-        <activity
-            android:name=".SplashActivity"
-            android:theme="@style/SplashTheme">
+        </activity>
+
+<!--        <activity android:name=".SplashActivity"></activity>-->
+        <activity android:name=".SplashActivity" android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
