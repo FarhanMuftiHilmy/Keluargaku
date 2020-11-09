@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="20dp"
-    tools:context=".LoginActivity">
+    tools:context=".RegisterActivity">
 
 
     <LinearLayout
@@ -18,9 +17,16 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="Buat Akun Baru"
             android:textSize="20sp"
             android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Username" />
 
         <EditText
             android:id="@+id/email"
@@ -39,29 +45,17 @@
             android:inputType="textPassword" />
 
         <Button
-            android:id="@+id/btn_login"
+            android:id="@+id/btn_register"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
-            android:background="@color/purple_200"
-            android:text="Masuk"
+            android:text="Daftar"
             android:textColor="#fff"
-            app:backgroundTint="#00BCD4"
+            app:backgroundTint="#2196F3"
             app:iconTint="#FFFFFF"
             app:rippleColor="@color/black" />
 
-        <TextView
-            android:id="@+id/forgot_password"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="end"
-            android:layout_marginTop="10dp"
-            android:gravity="center"
-            android:text="Lupa password?"
-            android:textStyle="bold" />
 
     </LinearLayout>
-
-
 
 </RelativeLayout>

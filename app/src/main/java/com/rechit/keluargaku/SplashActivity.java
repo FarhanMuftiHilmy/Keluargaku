@@ -13,7 +13,7 @@ public class SplashActivity extends AppCompatActivity {
 //        setContentView(R.layout.activity_splash);
         // langsung pindah ke MainActivity atau activity lain
         // begitu memasuki splash screen ini
-        Intent intent = new Intent(this, MainActivity.class);
+        Intent intent = new Intent(this, StartActivity.class);
         startActivity(intent);
         finish();
     }
