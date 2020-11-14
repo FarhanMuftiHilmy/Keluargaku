@@ -4,19 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#3F51B5"
+    android:background="#2F80ED"
     android:gravity="center"
     android:orientation="vertical"
     android:padding="10dp"
     tools:context=".StartActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Keluargaku"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:textStyle="bold" />
+
 
     <ImageView
         android:layout_width="wrap_content"
@@ -30,6 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
         android:text="login"
+        android:textColor="@color/white"
         app:backgroundTint="#00BCD4" />
 
     <Button
@@ -38,6 +33,7 @@
         android:layout_height="wrap_content"
         android:text="register"
         android:layout_marginTop="10dp"
+        android:textColor="@color/white"
         app:backgroundTint="#00BCD4" />
 
 </LinearLayout>
