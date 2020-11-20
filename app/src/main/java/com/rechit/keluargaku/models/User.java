@@ -1,4 +1,4 @@
-package com.rechit.keluargaku.Model;
+package com.rechit.keluargaku.models;
 
 public class User {
     private String id;
