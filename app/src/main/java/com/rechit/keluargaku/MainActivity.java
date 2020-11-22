@@ -11,6 +11,7 @@ import android.view.MenuItem;
 import com.google.firebase.auth.FirebaseAuth;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -20,6 +21,8 @@ import com.google.firebase.database.ValueEventListener;
 import com.rechit.keluargaku.models.User;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+=======
+>>>>>>> parent of 20be4f5... Add New Activities and Firebase references
 =======
 >>>>>>> parent of 20be4f5... Add New Activities and Firebase references
 =======
