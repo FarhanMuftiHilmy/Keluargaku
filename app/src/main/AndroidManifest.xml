@@ -30,8 +30,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Keluargaku">
 <<<<<<< HEAD
+<<<<<<< HEAD
         <activity android:name=".ChatActivity" />
         <activity android:name=".ProfilActivity" />
+=======
+>>>>>>> parent of 20be4f5... Add New Activities and Firebase references
 =======
 >>>>>>> parent of 20be4f5... Add New Activities and Firebase references
         <activity android:name=".MainActivity" />
