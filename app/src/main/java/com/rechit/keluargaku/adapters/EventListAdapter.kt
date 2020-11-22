@@ -1,6 +1,5 @@
 package com.rechit.keluargaku.adapters
 
-import android.app.LauncherActivity
 import android.view.Menu
 import android.view.View
 import android.view.ViewGroup
@@ -14,6 +13,7 @@ import com.rechit.keluargaku.extensions.shareEvents
 import com.rechit.keluargaku.helpers.*
 import com.rechit.keluargaku.helpers.Formatter
 import com.rechit.keluargaku.models.ListEvent
+import com.rechit.keluargaku.models.ListItem
 import com.rechit.keluargaku.models.ListSection
 import com.simplemobiletools.commons.adapters.MyRecyclerViewAdapter
 import com.simplemobiletools.commons.extensions.adjustAlpha
@@ -27,7 +27,7 @@ import kotlinx.android.synthetic.main.event_list_item.view.*
 import kotlinx.android.synthetic.main.event_list_section.view.*
 import java.util.*
 
-class EventListAdapter(activity: SimpleActivity, var listItems: ArrayList<LauncherActivity.ListItem>, val allowLongClick: Boolean, val listener: RefreshRecyclerViewListener?,
+class EventListAdapter(activity: SimpleActivity, var listItems: ArrayList<ListItem>, val allowLongClick: Boolean, val listener: RefreshRecyclerViewListener?,
                        recyclerView: MyRecyclerView, itemClick: (Any) -> Unit) : MyRecyclerViewAdapter(activity, recyclerView, null, itemClick) {
 
     private val topDivider = resources.getDrawable(R.drawable.divider_width)
@@ -122,10 +122,10 @@ class EventListAdapter(activity: SimpleActivity, var listItems: ArrayList<Launch
         notifyDataSetChanged()
     }
 
-    fun updateListItems(newListItems: ArrayList<LauncherActivity.ListItem>) {
+    fun updateListItems(newListItems: ArrayList<ListItem>) {
         if (newListItems.hashCode() != currentItemsHash) {
             currentItemsHash = newListItems.hashCode()
-            listItems = newListItems.clone() as ArrayList<LauncherActivity.ListItem>
+            listItems = newListItems.clone() as ArrayList<ListItem>
             recyclerView.resetItemCount()
             notifyDataSetChanged()
             finishActMode()
