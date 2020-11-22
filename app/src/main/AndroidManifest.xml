@@ -29,15 +29,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Keluargaku">
+<<<<<<< HEAD
         <activity android:name=".ChatActivity" />
         <activity android:name=".ProfilActivity" />
+=======
+>>>>>>> parent of 20be4f5... Add New Activities and Firebase references
         <activity android:name=".MainActivity" />
-        <activity
-            android:name=".RegisterActivity"
-            android:theme="@style/MenuStyle" />
-        <activity
-            android:name=".LoginActivity"
-            android:theme="@style/MenuStyle" />
+        <activity android:name=".RegisterActivity"
+            android:theme="@style/MenuStyle"/>
+        <activity android:name=".LoginActivity"
+            android:theme="@style/MenuStyle"/>
         <activity
             android:name=".StartActivity"
             android:label="@string/app_name"
