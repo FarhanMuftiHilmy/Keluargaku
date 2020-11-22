@@ -54,6 +54,14 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.ViewHolder>{
         } else{
             Glide.with(mContext).load(user.getImageURL()).into(holder.profile_image);
         }
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(mContext, PesanActivity.class);
+                intent.putExtra("userid", user.getId());
+                mContext.startActivity(intent);
+            }
+        });
 
 
     }
