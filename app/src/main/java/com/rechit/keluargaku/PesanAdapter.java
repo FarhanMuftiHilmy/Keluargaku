@@ -28,7 +28,7 @@ public class PesanAdapter extends RecyclerView.Adapter<PesanAdapter.ViewHolder>{
 
     FirebaseUser fuser;
 
-    public PesanAdapter(Context mContext, List<Pesan> mChat, String imageurl){
+    public PesanAdapter(Context mContext, List<Pesan> mPesan, String imageurl){
         this.mPesan = mPesan;
         this.mContext = mContext;
         this.imageurl = imageurl;
