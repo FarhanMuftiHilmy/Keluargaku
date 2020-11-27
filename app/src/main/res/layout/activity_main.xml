@@ -46,28 +46,54 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-
         android:padding="50dp"
         >
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:src="@drawable/button_kalender"/>
 
-        <Button
-            android:id="@+id/btn_profile"
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:layout_gravity="center"
-            android:layout_marginRight="10dp"/>
-        <Button
-            android:id="@+id/btn_calendar"
-            android:layout_height="100dp"
-            android:layout_width="150dp"
-            android:layout_toRightOf="@+id/btn_profile"
-            android:layout_gravity="center"/>
-        <Button
-            android:id="@+id/btn_chat"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_below="@+id/btn_profile"
-            android:layout_gravity="center"/>
+        <ImageButton
+            android:id="@+id/btn_kalender"
+            android:layout_width="147dp"
+            android:layout_height="142dp"
+            android:background="@drawable/button_kalender" />
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_profile"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:background="@drawable/button_profilkeluarga"-->
+<!--            android:layout_marginRight="10dp"/>-->
+            <ImageButton
+                android:id="@+id/btn_profil"
+                android:layout_width="147dp"
+                android:layout_toRightOf="@+id/btn_kalender"
+                android:layout_height="142dp"
+                android:background="@drawable/button_profilkeluarga" />
+
+<!--        <Button-->
+<!--            android:id="@+id/btn_calendar"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_width="150dp"-->
+<!--            android:layout_toRightOf="@+id/btn_profile"-->
+<!--            android:background="@drawable/button_kalender"-->
+<!--            android:layout_gravity="center"/>-->
+
+        <ImageButton
+            android:id="@+id/btn_obrolan"
+            android:layout_width="295dp"
+            android:layout_height="60dp"
+            android:layout_below="@+id/btn_kalender"
+            android:background="@drawable/button_obrolan" />
+<!--        <Button-->
+<!--            android:id="@+id/btn_chat"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_below="@+id/btn_profile"-->
+<!--            android:background="@drawable/button_obrolan"-->
+<!--            android:layout_gravity="center"/>-->
     </RelativeLayout>
 
 </LinearLayout>

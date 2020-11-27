@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
@@ -27,9 +28,9 @@ public class MainActivity extends AppCompatActivity {
 
     CircleImageView profile_image;
     TextView username;
-    Button btn_profile;
-    Button btn_calendar;
-    Button btn_chat;
+    ImageButton btn_profil;
+    ImageButton btn_kalender;
+    ImageButton btn_obrolan;
 
     FirebaseUser firebaseUser;
     DatabaseReference reference;
@@ -41,26 +42,26 @@ public class MainActivity extends AppCompatActivity {
 
         profile_image = findViewById(R.id.profile_image);
         username = findViewById(R.id.username);
-        btn_profile = findViewById(R.id.btn_profile);
-        btn_calendar = findViewById(R.id.btn_calendar);
-        btn_chat = findViewById(R.id.btn_chat);
+        btn_profil = findViewById(R.id.btn_profil);
+        btn_kalender = findViewById(R.id.btn_kalender);
+        btn_obrolan = findViewById(R.id.btn_obrolan);
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
         reference = FirebaseDatabase.getInstance().getReference("Users").child(firebaseUser.getUid());
 
-        btn_profile.setOnClickListener(new View.OnClickListener() {
+        btn_profil.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, ProfilActivity.class));
             }
         });
-        btn_calendar.setOnClickListener(new View.OnClickListener() {
+        btn_kalender.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, KalenderActivity.class));
             }
         });
-        btn_chat.setOnClickListener(new View.OnClickListener() {
+        btn_obrolan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this, PesanGrupActivity.class));
