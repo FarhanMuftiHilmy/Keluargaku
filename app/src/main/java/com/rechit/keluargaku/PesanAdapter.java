@@ -103,4 +103,6 @@ public class PesanAdapter extends RecyclerView.Adapter<PesanAdapter.ViewHolder>{
             return MSG_TYPE_LEFT;
         }
     }
+
+
 }

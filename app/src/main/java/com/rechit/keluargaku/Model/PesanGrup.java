@@ -2,13 +2,16 @@ package com.rechit.keluargaku.Model;
 
 public class PesanGrup {
     String message;
-    String name;
+    String sender;
     String key;
 
-    public PesanGrup(String message, String name, String key) {
+    public PesanGrup(String message, String sender) {
         this.message = message;
-        this.name = name;
+        this.sender = sender;
         this.key = key;
+    }
+
+    public PesanGrup() {
     }
 
     public String getMessage() {
@@ -20,11 +23,11 @@ public class PesanGrup {
     }
 
     public String getName() {
-        return name;
+        return sender;
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.sender = name;
     }
 
     public String getKey() {
@@ -39,7 +42,7 @@ public class PesanGrup {
     public String toString() {
         return "PesanGrup{" +
                 "message='" + message + '\'' +
-                ", name='" + name + '\'' +
+                ", name='" + sender + '\'' +
                 ", key='" + key + '\'' +
                 '}';
     }

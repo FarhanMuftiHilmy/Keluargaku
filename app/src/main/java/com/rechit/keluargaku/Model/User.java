@@ -1,15 +1,17 @@
 package com.rechit.keluargaku.Model;
 
-public class User {
+public class  User {
     private String id;
     private String username;
+    private String email;
     private String imageURL;
     private String status;
     private String hobi;
 
-    public User(String id, String username, String imageURL, String status, String hobi) {
+    public User(String id, String username, String email, String imageURL, String status, String hobi) {
         this.id = id;
         this.username = username;
+        this.email = email;
         this.imageURL = imageURL;
         this.status = status;
         this.hobi = hobi;
@@ -56,5 +58,14 @@ public class User {
 
     public void setHobi(String hobi) {
         this.hobi = hobi;
+    }
+
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getEmail() {
+        return email;
     }
 }

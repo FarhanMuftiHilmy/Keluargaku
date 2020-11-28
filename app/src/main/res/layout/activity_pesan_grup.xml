@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#e6e6e6"
-    tools:context=".PesanActivity">
+    tools:context=".PesanGrupActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/bar_layout"
@@ -34,7 +34,7 @@
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/rvPesanGrup"
         android:layout_below="@+id/bar_layout"
         android:layout_above="@+id/bottom"/>

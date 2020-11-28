@@ -129,7 +129,7 @@ public class PesanActivity extends AppCompatActivity {
 
         reference.child("Chats").push().setValue(hashMap);
 
-        final DatabaseReference chatRef = FirebaseDatabase.getInstance().getReference("Chatlist")
+        final DatabaseReference chatRef = FirebaseDatabase.getInstance().getReference("PrivateChatlist")
                 .child(fuser.getUid())
                 .child(userid);
 
