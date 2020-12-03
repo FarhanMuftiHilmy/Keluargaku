@@ -12,6 +12,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
+import android.text.InputType;
 import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -50,6 +51,8 @@ public class ProfilActivity extends AppCompatActivity {
 
     CircleImageView image_profile;
     TextView username;
+    TextView family_name;
+    TextView family_motto;
 
     private RecyclerView recyclerView;
 
@@ -76,6 +79,8 @@ public class ProfilActivity extends AppCompatActivity {
 
         image_profile = findViewById(R.id.profile_image);
         username = findViewById(R.id.username);
+        family_name = findViewById(R.id.family_name);
+        //family_motto = findViewById(R.id.family_motto);
 
 
 
@@ -275,5 +280,12 @@ public class ProfilActivity extends AppCompatActivity {
 
             }
         });
+    }
+
+    public void onClickEdit(View view) {
+        family_name.setCursorVisible(true);
+        family_name.setFocusableInTouchMode(true);
+        family_name.setInputType(InputType.TYPE_CLASS_TEXT);
+        family_name.requestFocus();
     }
 }

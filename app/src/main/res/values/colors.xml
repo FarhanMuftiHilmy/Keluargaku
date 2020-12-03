@@ -8,4 +8,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="splash_bg">#2F80ED</color>
+    <color name="divider_grey">#88808080</color>
+    <color name="pressed_item_foreground">#08000000</color>
 </resources>

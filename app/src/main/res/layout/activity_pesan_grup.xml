@@ -7,36 +7,15 @@
     android:background="#e6e6e6"
     tools:context=".PesanGrupActivity">
 
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/bar_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@color/cardview_shadow_start_color"
-            app:popupTheme="@style/MenuStyle">
-
-            <TextView
-                android:id="@+id/username"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="25dp"
-                android:text="Pesan Grup"
-                android:textColor="#fff"
-                android:textStyle="bold" />
-
-        </androidx.appcompat.widget.Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
+    <include
+        android:id="@+id/toolbar2"
+        layout="@layout/bar_layout_small"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/rvPesanGrup"
-        android:layout_below="@+id/bar_layout"
+        android:layout_below="@+id/toolbar2"
         android:layout_above="@+id/bottom"/>
 
     <RelativeLayout

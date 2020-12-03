@@ -13,7 +13,10 @@
         android:layout_height="wrap_content">
         <include
             android:id="@+id/toolbar"
-            layout="@layout/bar_layout"/>
+            layout="@layout/bar_layout_2"/>
+        <include
+            android:id="@+id/toolbar_layout_small"
+            layout="@layout/bar_layout_2_small"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

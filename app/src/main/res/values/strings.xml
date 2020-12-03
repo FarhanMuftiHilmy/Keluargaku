@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Keluargaku</string>
+    <string name="event_title">Judul</string>
+    <string name="location">Lokasi</string>
+    <string name="description">Deskripsi</string>
+    <string name="all_day">Setiap hari</string>
+    <string name="add_another_reminder">Tambah pengingat lain</string>
+    <string name="no_repetition">Tidak ada pengulangan</string>
+    <string name="repeat_on">Pengulangan dinyalakan</string>
+    <string name="every_day">Setiap hari</string>
+    <string name="repeat_till">Ulangi sampai</string>
+    <string name="forever">Selamanya</string>
+    <string name="new_event">Acara Baru</string>
 </resources>
