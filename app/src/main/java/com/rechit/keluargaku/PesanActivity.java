@@ -61,10 +61,9 @@ public class PesanActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pesan);
 
-        Toolbar toolbar = findViewById(R.id.toolbar2);
+        Toolbar toolbar = findViewById(R.id.toolbar_small);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
-
 
         recyclerView = findViewById(R.id.rvPesan);
         recyclerView.setHasFixedSize(true);

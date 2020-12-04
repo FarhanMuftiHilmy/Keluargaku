@@ -12,11 +12,29 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
         <include
-            android:id="@+id/toolbar"
+            android:id="@+id/toolbar2"
             layout="@layout/bar_layout_2"/>
-        <include
-            android:id="@+id/toolbar_layout_small"
-            layout="@layout/bar_layout_2_small"/>
+<!--        <include-->
+<!--            android:id="@+id/toolbar_layout_small"-->
+<!--            layout="@layout/bar_layout_2_small"/>-->
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#2F80ED">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar2_small"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:popupTheme="@style/MenuStyle">
+
+
+
+            </androidx.appcompat.widget.Toolbar>
+
+
+
+        </com.google.android.material.appbar.AppBarLayout>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
