@@ -53,7 +53,6 @@
                 android:layout_gravity="center"
                 android:id="@+id/username"
                 android:layout_marginTop="50dp"
-                android:text="username"
                 android:textColor="#fff"
                 android:textStyle="bold"/>
 
@@ -64,15 +63,12 @@
 
 
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
         android:padding="50dp"
         >
-        <ImageView
-            android:layout_width="150dp"
-            android:layout_height="100dp"
-            android:src="@drawable/button_kalender"/>
+
 
         <ImageButton
             android:id="@+id/btn_kalender"
