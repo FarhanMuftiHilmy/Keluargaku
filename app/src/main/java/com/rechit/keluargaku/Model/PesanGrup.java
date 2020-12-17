@@ -1,14 +1,16 @@
 package com.rechit.keluargaku.Model;
 
 public class PesanGrup {
-    String message;
-    String sender;
-    String key;
+    private String message;
+    private String sender;
+    private String key;
+    private boolean isseen;
 
-    public PesanGrup(String message, String sender) {
+    public PesanGrup(String message, String sender, boolean isseen) {
         this.message = message;
         this.sender = sender;
         this.key = key;
+        this.isseen = isseen;
     }
 
     public PesanGrup() {
@@ -36,6 +38,10 @@ public class PesanGrup {
 
     public void setKey(String key) {
         this.key = key;
+    }
+
+    public boolean Isseen() {
+        return isseen;
     }
 
     @Override

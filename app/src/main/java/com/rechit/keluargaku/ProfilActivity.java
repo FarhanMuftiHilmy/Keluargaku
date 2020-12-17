@@ -19,6 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.webkit.MimeTypeMap;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -127,7 +128,7 @@ public class ProfilActivity extends AppCompatActivity {
                 username.setText(user.getUsername());
 
                 if(user.getImageURL().equals("default")){
-                    image_profile.setImageResource(R.mipmap.ic_launcher);
+                    image_profile.setImageResource(R.drawable.ic_add_photo_white_padding35);
                 } else{
                     Glide.with(ProfilActivity.this).load(user.getImageURL()).into(image_profile);
                 }

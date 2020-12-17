@@ -4,7 +4,7 @@
     android:id="@+id/toolbar_small"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#00BCD4"
+    android:background="#2F80ED"
     app:popupTheme="@style/MenuStyle">
 
 </androidx.appcompat.widget.Toolbar>

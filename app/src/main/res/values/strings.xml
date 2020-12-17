@@ -11,4 +11,7 @@
     <string name="repeat_till">Ulangi sampai</string>
     <string name="forever">Selamanya</string>
     <string name="new_event">Acara Baru</string>
+    <string name="save">SAVE</string>
+    <string name="write_note">WRITE NOTE</string>
+    <string name="no_note">Tidak ada Note tersimpan</string>
 </resources>

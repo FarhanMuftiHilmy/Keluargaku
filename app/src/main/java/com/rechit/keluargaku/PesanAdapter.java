@@ -56,7 +56,7 @@ public class PesanAdapter extends RecyclerView.Adapter<PesanAdapter.ViewHolder>{
         holder.show_message.setText(chat.getMessage());
 
         if(imageurl.equals("default")){
-            holder.profile_image.setImageResource(R.mipmap.ic_launcher);
+            holder.profile_image.setImageResource(R.drawable.ic_profile_image_white);
         } else{
             Glide.with(mContext).load(imageurl).into(holder.profile_image);
         }

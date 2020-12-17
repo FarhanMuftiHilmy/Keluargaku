@@ -11,6 +11,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -28,12 +29,17 @@ import com.rechit.keluargaku.Model.User;
 import java.util.ArrayList;
 import java.util.List;
 
+import de.hdodenhof.circleimageview.CircleImageView;
+
 public class PesanGrupActivity extends AppCompatActivity implements View.OnClickListener{
+    CircleImageView profile_image;
     FirebaseAuth auth;
     FirebaseDatabase db;
     FirebaseUser fuser;
 
     RecyclerView recyclerView;
+
+    TextView username;
 
     DatabaseReference reference;
     PesanGrupAdapter pesanGrupAdapter;
@@ -65,7 +71,9 @@ public class PesanGrupActivity extends AppCompatActivity implements View.OnClick
 
         u = new User();
 
+        profile_image = findViewById(R.id.profile_image);
         recyclerView = (RecyclerView)findViewById(R.id.rvPesanGrup);
+        username = findViewById(R.id.username);
         text_send = (EditText)findViewById(R.id.text_send);
         btn_send = (ImageButton)findViewById(R.id.btn_send);
         btn_send.setOnClickListener(this);
@@ -78,7 +86,7 @@ public class PesanGrupActivity extends AppCompatActivity implements View.OnClick
     public void onClick(View v) {
         if(!TextUtils.isEmpty(text_send.getText().toString()))
         {
-            pg = new PesanGrup(text_send.getText().toString(), u.getUsername());
+            pg = new PesanGrup(text_send.getText().toString(), u.getUsername(), false);
             text_send.setText("");
             reference.push().setValue(pg);
         }
@@ -101,7 +109,9 @@ public class PesanGrupActivity extends AppCompatActivity implements View.OnClick
             public void onDataChange(DataSnapshot snapshot) {
                 u = snapshot.getValue(User.class);
                 u.setId(fuser.getUid());
+
                 AllMethods.name = u.getUsername();
+
             }
 
             @Override
@@ -115,7 +125,7 @@ public class PesanGrupActivity extends AppCompatActivity implements View.OnClick
         reference.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(DataSnapshot snapshot, String previousChildName) {
-                PesanGrup pg = snapshot.getValue(PesanGrup.class);
+                pg = snapshot.getValue(PesanGrup.class);
                 pg.setKey(snapshot.getKey());
                 pesan.add(pg);
                 tampilkanPesan(pesan);
@@ -182,7 +192,9 @@ public class PesanGrupActivity extends AppCompatActivity implements View.OnClick
     }
 
     private void tampilkanPesan(List<PesanGrup> pesan) {
-        recyclerView.setLayoutManager(new LinearLayoutManager(PesanGrupActivity.this));
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getApplicationContext());
+        linearLayoutManager.setStackFromEnd(true);
+        recyclerView.setLayoutManager(linearLayoutManager);
         pesanGrupAdapter = new PesanGrupAdapter(PesanGrupActivity.this, pesan, reference);
         recyclerView.setAdapter(pesanGrupAdapter);
     }

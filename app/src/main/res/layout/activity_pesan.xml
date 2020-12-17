@@ -14,7 +14,7 @@
         android:id="@+id/toolbar_small"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/cardview_shadow_start_color"
+        android:background="#2F80ED"
         app:popupTheme="@style/MenuStyle">
 
         <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
