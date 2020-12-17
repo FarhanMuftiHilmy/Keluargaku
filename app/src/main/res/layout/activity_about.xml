@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tentang"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <View
+        android:id="@+id/rectangle_9"
+        android:layout_width="match_parent"
+        android:layout_height="338dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/rectangle_9"
+        />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="87dp"
+        android:src="@mipmap/ic_launcher"/>
+
+    <TextView
+        android:id="@+id/versi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180dp"
+        android:textSize="18sp"
+        android:textColor="@color/white"
+        android:text="@string/versi"/>
+    <TextView
+        android:id="@+id/dirilis_tan"
+        android:layout_width="262dp"
+        android:layout_height="26dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="18sp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="370dp"
+        android:text="@string/dirilis_tan"
+        android:textColor="#2F80ED"
+        android:gravity="top"
+        />
+    <TextView
+        android:id="@+id/dibuat_oleh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#2F80ED"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="73dp"
+        android:layout_marginTop="420dp"
+        android:text="Dibuat Oleh:\n1. Farhan Mufti HIlmy\n2. Henrikus Wahyu Setyabudiwan\n3. Rachma Aurya Nurchaliza"
+        android:gravity="top"
+        />
+    <TextView
+        android:id="@+id/special_thanks_to"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:textColor="#2F80ED"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="73dp"
+        android:layout_marginTop="530dp"
+        android:text="Special thanks to:\n1. Tuhan YME\n2. Dosen TRPL Sekolah Vokasi\nUGM 2019"
+        android:gravity="top"
+        />
+
+
+
+
+
+</RelativeLayout>

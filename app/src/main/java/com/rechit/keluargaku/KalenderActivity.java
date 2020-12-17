@@ -1,11 +1,14 @@
 package com.rechit.keluargaku;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
@@ -66,7 +69,38 @@ public class KalenderActivity extends AppCompatActivity {
             }
         });
 
+        listView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+                final int id = Integer.parseInt(arrayList.get(i).get("id"));
+                showConfirm(id);
+                return true;
+            }
+        });
 
+
+    }
+
+    private void showConfirm(final int id){
+        new AlertDialog.Builder(this)
+                .setTitle("Hapus Data")
+                .setMessage("Apakah anda yakiin ingin menghapus data ini?")
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setPositiveButton("Ya", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialogInterface, int i) {
+                        delete(id);
+
+                    }
+                })
+                .setNegativeButton("Tidak", null)
+                .show();
+    }
+
+    private void delete(int id){
+        databaseHelper.delete(id);
+        arrayList.clear();
+        loadData();
     }
 
     @Override

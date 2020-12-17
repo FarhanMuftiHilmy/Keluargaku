@@ -10,23 +10,36 @@
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
+        <activity android:name=".AboutActivity"
+            android:theme="@style/Theme.Keluargaku"/>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/title_activity_settings"
+            android:theme="@style/Theme.Keluargaku"/>
         <activity
             android:name=".NotePreviewActivity"
             android:theme="@style/CalendarTheme" />
-        <activity android:name=".AddNoteActivity"
-            android:theme="@style/Theme.Keluargaku"/>
-        <activity android:name=".EventActivity"
-            android:theme="@style/Theme.Keluargaku"/>
-        <activity android:name=".PesanActivity"
-            android:theme="@style/Theme.Keluargaku"/>
-        <activity android:name=".PesanGrupActivity"
-            android:theme="@style/Theme.Keluargaku"/>
-        <activity android:name=".KalenderActivity"
-            android:theme="@style/Theme.Keluargaku"/>
-        <activity android:name=".ProfilActivity"
-            android:theme="@style/Theme.Keluargaku"/>
-        <activity android:name=".MainActivity"
-            android:theme="@style/Theme.Keluargaku"/>
+        <activity
+            android:name=".AddNoteActivity"
+            android:theme="@style/Theme.Keluargaku" />
+        <activity
+            android:name=".EventActivity"
+            android:theme="@style/Theme.Keluargaku" />
+        <activity
+            android:name=".PesanActivity"
+            android:theme="@style/Theme.Keluargaku" />
+        <activity
+            android:name=".PesanGrupActivity"
+            android:theme="@style/Theme.Keluargaku" />
+        <activity
+            android:name=".KalenderActivity"
+            android:theme="@style/Theme.Keluargaku" />
+        <activity
+            android:name=".ProfilActivity"
+            android:theme="@style/Theme.Keluargaku" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/Theme.Keluargaku" />
         <activity
             android:name=".RegisterActivity"
             android:theme="@style/MenuStyle" />

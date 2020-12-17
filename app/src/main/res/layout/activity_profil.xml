@@ -6,100 +6,100 @@
     android:layout_height="match_parent"
     tools:context=".ProfilActivity">
 
-        <FrameLayout
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/fl">
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/bar_layout_2"/>
+        <include
+            android:id="@+id/toolbar_layout_small"
+            layout="@layout/bar_layout_2_small"/>
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/fl">
-            <include
-                android:id="@+id/toolbar"
-                layout="@layout/bar_layout_2"/>
-            <include
-                android:id="@+id/toolbar_layout_small"
-                layout="@layout/bar_layout_2_small"/>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="vertical"
-                android:padding="100dp">
-                <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/profile_image"
-                    android:layout_gravity="center"
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    />
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:id="@+id/username"
-                    android:layout_marginTop="50dp"
-                    android:text="username"
-                    android:textColor="#fff"
-                    android:textStyle="bold"/>
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="100dp">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_gravity="center"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/username"
+                android:layout_marginTop="50dp"
+                android:text="username"
+                android:textColor="#fff"
+                android:textStyle="bold"/>
 
 
-            </LinearLayout>
+        </LinearLayout>
 
 
-        </FrameLayout>
+    </FrameLayout>
 
 
-        <androidx.cardview.widget.CardView
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/fl">
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/fl">
-            <RelativeLayout
+            android:padding="8dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/family_motto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/family_name"
+                android:layout_toRightOf="@+id/family_image"
+                android:layout_marginTop="10dp"
+                android:text="“Keluarga adalah salah hal terpenting yang kita miliki, yang tak akan pernah berubah dan selalu ada ketika dibutuhkan.”"
+                android:textColor="@color/black"
+                android:textStyle="italic"/>
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/family_image"
+                android:src="@drawable/ic_people_vector"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Keluargaku"
+                android:layout_toRightOf="@+id/family_image"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:id="@+id/family_name"
+                android:textSize="18sp"
+                android:onClick="onClickEdit"/>
+
+            <EditText
                 android:layout_width="match_parent"
-                android:padding="8dp"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/family_image"
+                android:layout_margin="10dp"
+                android:hint="Cari anggota.."
+                android:id="@+id/search_users"/>
 
-                <TextView
-                    android:id="@+id/family_motto"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/family_name"
-                    android:layout_toRightOf="@+id/family_image"
-                    android:layout_marginTop="10dp"
-                    android:text="Motto"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"/>
-
-                <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
-                    android:layout_marginRight="20dp"
-                    android:id="@+id/family_image"
-                    android:src="@drawable/ic_people_vector"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="20dp"
-                    android:text="Nama Keluarga"
-                    android:layout_toRightOf="@+id/family_image"
-                    android:textColor="@color/black"
-                    android:textStyle="bold"
-                    android:id="@+id/family_name"
-                    android:textSize="18sp"
-                    android:onClick="onClickEdit"/>
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/family_image"
-                    android:layout_margin="5dp"
-                    android:hint="Cari anggota.."
-                    android:id="@+id/search_users"/>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_below="@+id/search_users"
-                    android:id="@+id/recycler_view"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@+id/search_users"
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
 
 
-            </RelativeLayout>
+        </RelativeLayout>
 
-        </androidx.cardview.widget.CardView>
+    </androidx.cardview.widget.CardView>
+
 
 </RelativeLayout>
